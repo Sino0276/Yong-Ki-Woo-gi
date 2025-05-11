@@ -9,15 +9,15 @@ public class Singleton<T> : MonoBehaviour where T : MonoBehaviour
 
     public static T Instance => instance ?? null;
 
-    private void Awake()
+    protected virtual void Awake()
     {
         if (instance != null && instance != this)
         {
             Destroy(this.gameObject);
             return;
         }
-        
-        instance = T;
+
+        instance = this as T;
         DontDestroyOnLoad(this.gameObject);
     }
 }
