@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+<<<<<<<< HEAD:Assets/Scripts/Managers/ResourceManager.cs.meta
+guid: b2a7d8e9d9527974d87f5f7de56a64dd
+========
+guid: a89c7b625c1c3ef41a30318f4a897a8c
+>>>>>>>> Develop:Assets/Scripts/Managers/DataManager.cs.meta
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

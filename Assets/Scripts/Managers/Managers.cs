@@ -4,6 +4,8 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 
+
+// Manager관리 클래스
 public class Managers : Singleton<Managers>
 {
     [SerializeField] private PoolManager poolManager = new PoolManager();
@@ -16,27 +18,6 @@ public class Managers : Singleton<Managers>
     public static UIManager UI => Instance.uiManager;
     public static ResourceManager Resource => Instance.resourceManager;
 
-    protected override void Awake()
-    {
-        base.Awake();
-    }
+    
 }
 
-[Serializable]
-public class PoolManager
-{
-    public void Init()
-    {
-
-    }
-}
-
-public class UIManager
-{
-
-}
-
-public class DataManager
-{
-
-}
