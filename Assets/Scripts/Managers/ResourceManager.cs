@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class ResourceManager
@@ -8,12 +9,12 @@ public class ResourceManager
 
     public T Load<T>(string path) where T : Object
     {
-        if (resources.TryGetValue(path, out Object resource))
+        if(resources.ContainsKey(path))
         {
-            return resource as T;
+            return resources[path].GetComponent<T>();
         }
 
-        resource = Resources.Load<T>(path);
+        T resource = Resources.Load<T>(path);
         if (resource == null)
         {
             Debug.Log($"Failed to load prefab at path: {path}");
@@ -21,6 +22,6 @@ public class ResourceManager
         }
 
         resources.Add(path, resource);
-        return resource as T;
+        return resource;
     }
 }
