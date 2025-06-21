@@ -7,7 +7,11 @@
       "dependencies": {
         "com.unity.test-framework": "1.1.9"
       },
+<<<<<<< Updated upstream
       "hash": "0a98b387a92cf9f1f47012fc46d4cf33576e5916"
+=======
+      "hash": "38fecf55e4fd94ccfe58a92ed8ad1a529ba1694e"
+>>>>>>> Stashed changes
     },
     "com.unity.2d.animation": {
       "version": "9.1.0",
