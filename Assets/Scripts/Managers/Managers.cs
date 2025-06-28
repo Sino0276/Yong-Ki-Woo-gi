@@ -3,7 +3,6 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
-using UnityEngine.Serialization;
 
 
 // Manager관리 클래스
@@ -14,14 +13,14 @@ public class Managers : Singleton<Managers>
     [SerializeField] private UIManager uiManager = new UIManager();
     [SerializeField] private ResourceManager resourceManager = new ResourceManager();
     [SerializeField] private DataManager dataManager = new DataManager();
-    [FormerlySerializedAs("userDataManager")] [SerializeField] private UserDataManager userData = new UserDataManager();
+    [SerializeField] private UserData userData = new UserData();
 
     public static PoolManager Pool => Instance.poolManager;
     public static SoundManager Sound => Instance.soundManager;
     public static UIManager UI => Instance.uiManager;
     public static ResourceManager Resource => Instance.resourceManager;
     public static DataManager Data => Instance.dataManager;
-    public static UserDataManager UserData => Instance.userData;
+    public static UserData UserData => Instance.userData;
 
     protected override void Awake()
     {
@@ -31,22 +30,14 @@ public class Managers : Singleton<Managers>
     private void Init()
     {
         dataManager.Init();
+
         Load();
     }
-    
+
     [ContextMenu("Save")]
-    public void Save()
-    {
-        PlayerPrefs.SetString("UserData", JsonUtility.ToJson(this));
-    }
+    public void Save() => userData.Save();
 
     [ContextMenu("Load")]
-    public void Load()
-    {
-        if (PlayerPrefs.HasKey("UserData"))
-        {
-            JsonUtility.FromJsonOverwrite(PlayerPrefs.GetString("UserData"), this);
-        }
-    }
+    public void Load() => userData.Load();
 }
 
