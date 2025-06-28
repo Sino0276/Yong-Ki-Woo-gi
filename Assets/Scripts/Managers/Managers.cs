@@ -35,18 +35,9 @@ public class Managers : Singleton<Managers>
     }
 
     [ContextMenu("Save")]
-    public void Save()
-    {
-        PlayerPrefs.SetString("UserData", JsonUtility.ToJson(userData));
-    }
+    public void Save() => userData.Save();
 
     [ContextMenu("Load")]
-    public void Load()
-    {
-        if (PlayerPrefs.HasKey("UserData"))
-        {
-            JsonUtility.FromJsonOverwrite(PlayerPrefs.GetString("UserData"), userData);
-        }
-    }
+    public void Load() => userData.Load();
 }
 

@@ -24,4 +24,17 @@ public class UserData
     public int critDmgLevel = 0;
     public int feverLevel = 0;
     public int feverTimeLevel = 0;
+
+    public void Save()
+    {
+        PlayerPrefs.SetString("UserData", JsonUtility.ToJson(this));
+    }
+
+    public void Load()
+    {
+        if (PlayerPrefs.HasKey("UserData"))
+        {
+            JsonUtility.FromJsonOverwrite(PlayerPrefs.GetString("UserData"), this);
+        }
+    }
 }
