@@ -23,4 +23,23 @@ public class ResourceManager
         resources.Add(path, resource);
         return resource as T;
     }
+
+    public List<Sprite> LoadProjectileSprites(List<string> paths)
+    {
+        List<Sprite> sprites = new List<Sprite>();
+
+        for (int i = 0; i < paths.Count; i++)
+        {
+            Sprite sprite = Load<Sprite>("Projectiles/" + paths[i]);
+            if (sprite == null)
+            {
+                Debug.Log($"Failed to load prefab at path: {paths[i]}");
+                return null;
+            }
+
+            sprites.Add(sprite);
+        }
+
+        return sprites;
+    }
 }

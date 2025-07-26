@@ -9,15 +9,17 @@ public class DragonController : MonoBehaviour
     private AttackHandler[] attackHandlers;
     private int currentAttackHandlerIndex = 0;
     public DragonStats DragonStats { get; private set; }
+    public GameInfo_DragonsData DragonData { get; private set;}
 
-    public void Awake()
+    public void Start()
     {
         Init(1);
     }
 
     public void Init(int id)
     {
-        DragonStats = new DragonStats(id);
+        DragonData = Managers.Data.GameInfo.GetByKey(id);
+        DragonStats = new DragonStats(DragonData);
         attackHandlers = GetComponentsInChildren<AttackHandler>();
     }
 

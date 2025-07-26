@@ -22,14 +22,19 @@ public class GameInfo_DragonsData
     public string description;
 
     /// <summary>
-    /// SpritePath
+    /// IconPath
     /// </summary>
-    public string spritePath;
+    public string iconPath;
 
     /// <summary>
     /// PrefabPath
     /// </summary>
     public string prefabPath;
+
+    /// <summary>
+    /// ProjectileSpritePath
+    /// </summary>
+    public List<string> projectileSpritePath;
 
     /// <summary>
     /// Percent

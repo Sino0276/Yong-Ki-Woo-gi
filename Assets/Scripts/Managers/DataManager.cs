@@ -10,6 +10,4 @@ public class DataManager
     {
         GameInfo = new GameInfo_DragonsDataLoader();
     }
-    
-    
 }

@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: -1991669249113316835}
   - component: {fileID: 5238380399852038960}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: Projectile
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -67,6 +67,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 419d2c95218f7ab41914a91ffe75e283, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  spriteRenderer: {fileID: 5238380399852038960}
+  speed: 1
 --- !u!212 &5238380399852038960
 SpriteRenderer:
   m_ObjectHideFlags: 0
