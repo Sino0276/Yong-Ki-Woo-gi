@@ -4,8 +4,8 @@
       "key": 1,
       "name": "새끼용",
       "description": "알에서 막 깨어난 용.\\n가끔식 자기 똥을 먹는다.",
-      "iconPath": "",
-      "prefabPath": "",
+      "iconPath": "Icon/Icon_Dragon_00",
+      "prefabPath": "Dragons/BabyDragon",
       "projectileSpritePath": [
         "Br_baby_00",
         "Br_baby_01"
@@ -29,8 +29,8 @@
       "key": 2,
       "name": "어린용",
       "description": "일명 초딩용.\\n지치지 않고 뒤어 다니기 때문에 자주 만날 수 있다.",
-      "iconPath": "",
-      "prefabPath": "",
+      "iconPath": "Icon/Icon_Dragon_01",
+      "prefabPath": "Dragons/KidDragon",
       "projectileSpritePath": [
         "Br_baby_00",
         "Br_baby_01"
@@ -54,8 +54,8 @@
       "key": 3,
       "name": "사춘기용",
       "description": "사춘기에 들어선 용.\\n성격이 까칠하고 가끔씩 반항을 한다. 왕국 여기저기서 만날 수 있다.",
-      "iconPath": "",
-      "prefabPath": "",
+      "iconPath": "Icon/Icon_Dragon_02",
+      "prefabPath": "Dragons/TeenDragon",
       "projectileSpritePath": [
         "Br_baby_00",
         "Br_baby_01"
@@ -79,8 +79,8 @@
       "key": 4,
       "name": "빨간용",
       "description": "성장이 끝난용.\\n레드 드래곤으로 불린다.",
-      "iconPath": "",
-      "prefabPath": "",
+      "iconPath": "Icon/Icon_Dragon_03",
+      "prefabPath": "Dragons/RedDragon",
       "projectileSpritePath": [
         "Br_baby_00",
         "Br_baby_01"
@@ -104,8 +104,8 @@
       "key": 5,
       "name": "파란용",
       "description": "레드 드래곤의 먼 친척. 오래전 북극에 갔다가 추워서 피부와 브레스가 파래졌다.\\n해변가에서 일광용 하기를 좋아한다.",
-      "iconPath": "",
-      "prefabPath": "",
+      "iconPath": "Icon/Icon_Dragon_04",
+      "prefabPath": "Dragons/BlueDragon",
       "projectileSpritePath": [
         "Br_baby_00",
         "Br_baby_01"
@@ -129,8 +129,8 @@
       "key": 6,
       "name": "정글공룡",
       "description": "정글에 사는 원시 드래곤.\\n나뭇잎을 많이 먹어서 녹색 브레스를 발사함. 고대종 탐사팀에 의하여 발견되었으며, 공기 좋은 곳을 좋아한다고 함.",
-      "iconPath": "",
-      "prefabPath": "",
+      "iconPath": "Icon/Icon_Dragon_05",
+      "prefabPath": "Dragons/JungleDino",
       "projectileSpritePath": [
         "Br_baby_00",
         "Br_baby_01"
@@ -154,8 +154,8 @@
       "key": 7,
       "name": "북극공룡",
       "description": "북그에 사는 원시 드래곤.\\n빙하가 녹아서 살 곳이 점점 줄고있다. 고대종 탐사팀의 선박이 북극에 좌초되었을 때 발견되었다.",
-      "iconPath": "",
-      "prefabPath": "",
+      "iconPath": "Icon/Icon_Dragon_06",
+      "prefabPath": "Dragons/ArcticDino",
       "projectileSpritePath": [
         "Br_baby_00",
         "Br_baby_01"
@@ -179,8 +179,8 @@
       "key": 8,
       "name": "화산공룡",
       "description": "화산 지대에서 발견된 원시 드래곤. 화산이 폭발해서 모든 생명체가 도망 중일때, 용암에서 온천을 즐겼다고 한다.",
-      "iconPath": "",
-      "prefabPath": "",
+      "iconPath": "Icon/Icon_Dragon_07",
+      "prefabPath": "Dragons/VolcanoDino",
       "projectileSpritePath": [
         "Br_baby_00",
         "Br_baby_01"
@@ -204,8 +204,8 @@
       "key": 9,
       "name": "하늘공룡",
       "description": "날아다니는 원시 드래곤.\\n최근 발견된 적은 없으나, 고대종 대백과사전에 그 존재가 기록되어 있으며 난폭한 성격을 지녔다고 하니 다가가지 말 것!",
-      "iconPath": "",
-      "prefabPath": "",
+      "iconPath": "Icon/Icon_Dragon_08",
+      "prefabPath": "Dragons/SkyDino",
       "projectileSpritePath": [
         "Br_baby_00",
         "Br_baby_01"
@@ -229,8 +229,8 @@
       "key": 10,
       "name": "사막비룡",
       "description": "사막의 거친 모래 바람을 날린다.\\n사막에서 만난다면 모래 바람때문에 길을 잃을 확률이 높아서, 사막 여행자들이 두려워하는 존재.",
-      "iconPath": "",
-      "prefabPath": "",
+      "iconPath": "Icon/Icon_Dragon_09",
+      "prefabPath": "Dragons/DessertWybern",
       "projectileSpritePath": [
         "Br_baby_00",
         "Br_baby_01"
@@ -254,8 +254,8 @@
       "key": 11,
       "name": "바다비룡",
       "description": "시원한 바다 바람을 날려주는 비룡.\\n인간들에게 인기가 많으나, 중지에서 잘 나오지 않는다.",
-      "iconPath": "",
-      "prefabPath": "",
+      "iconPath": "Icon/Icon_Dragon_10",
+      "prefabPath": "Dragons/SeatWybern",
       "projectileSpritePath": [
         "Br_baby_00",
         "Br_baby_01"
@@ -279,8 +279,8 @@
       "key": 12,
       "name": "숲비룡",
       "description": "숲의 상쾌한 바람을 날리는 비룡.\\n미세먼지를 날려주는 효과가 있음. 주로 둥지에서 생활한다.",
-      "iconPath": "",
-      "prefabPath": "",
+      "iconPath": "Icon/Icon_Dragon_11",
+      "prefabPath": "Dragons/ForestWybern",
       "projectileSpritePath": [
         "Br_baby_00",
         "Br_baby_01"
@@ -304,7 +304,7 @@
       "key": 13,
       "name": "얼음비룡",
       "description": "보석같이 아름다운 얼음 결정을 만들어 낸다.\\n하지만 매우 날카로우니 주의!!\\n자신이 만든 얼음 둥지 꾸미기를 좋아한다.",
-      "iconPath": "",
+      "iconPath": "Icon/Icon_Dragon_12",
       "prefabPath": "",
       "projectileSpritePath": [
         "Br_baby_00",
@@ -329,7 +329,7 @@
       "key": 14,
       "name": "번개비룡",
       "description": "작지만 따가운 브레스를 발사한다. 만지면 찌릿찌릿 함.",
-      "iconPath": "",
+      "iconPath": "Icon/Icon_Dragon_13",
       "prefabPath": "",
       "projectileSpritePath": [
         "Br_baby_00",
@@ -354,7 +354,7 @@
       "key": 15,
       "name": "화염비룡",
       "description": "비룡중 가장 난폭한 성질을 가지고 있다. 가끔씩 마을이나 숲에 화재를 일으키곤 한다! 주로 둥지에서 생활한다.",
-      "iconPath": "",
+      "iconPath": "Icon/Icon_Dragon_14",
       "prefabPath": "",
       "projectileSpritePath": [
         "Br_baby_00",

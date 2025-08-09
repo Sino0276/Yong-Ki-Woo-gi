@@ -10,14 +10,12 @@ public class GameManager
     [field: SerializeField] public GameObject dragonSpawnPoint { get; private set; }
 
     public EnemyController Enemy { get; private set; }
+    public StageManager StageManager { get; private set; }
 
     public void Init()
     {
-
+        StageManager = new StageManager();
     }
 
-    private void SpawnEnemy()
-    {
-        Enemy = Object.Instantiate(Managers.Resource.Load<EnemyController>("Enemy"), enemySpawnPoint.transform.position, Quaternion.identity);
-    }
+    
 }

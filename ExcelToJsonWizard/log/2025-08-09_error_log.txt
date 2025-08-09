@@ -1,0 +1,2 @@
+2025-08-09 오후 10:10:48: Empty values detected in file 'C:\Users\truec\Desktop\code\MyGitHub\Unity\Yong-Ki-Woo-gi\ExcelToJsonWizard\excel_files\GameInfo.xlsx'. Default values were used.
+2025-08-09 오후 10:10:48: Empty values detected in file 'C:\Users\truec\Desktop\code\MyGitHub\Unity\Yong-Ki-Woo-gi\ExcelToJsonWizard\excel_files\GameInfo.xlsx'. Default values were used.
