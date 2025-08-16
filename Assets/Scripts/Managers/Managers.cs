@@ -36,14 +36,13 @@ public class Managers : Singleton<Managers>
     private void Init()
     {
         dataManager.Init();
-
-        Load();
+        userData.Init();
+        soundManager.Init();
+        poolManager.Init();
+        uiManager.Init();
+        resourceManager.Init();
+        utilityManager.Init();
+        gameManager.Init();
     }
-
-    [ContextMenu("Save")]
-    public void Save() => userData.Save();
-
-    [ContextMenu("Load")]
-    public void Load() => userData.Load();
 }
 

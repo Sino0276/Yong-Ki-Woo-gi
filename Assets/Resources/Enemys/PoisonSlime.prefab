@@ -296,6 +296,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1842208428790142930}
+  - component: {fileID: -7308558185376243268}
   m_Layer: 0
   m_Name: PoisonSlime
   m_TagString: Untagged
@@ -319,6 +320,18 @@ Transform:
   - {fileID: 4713051300450286103}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &-7308558185376243268
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8220068015304944127}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 213232923adaf7d4894596293dc5e0b3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &8389023355776581609
 GameObject:
   m_ObjectHideFlags: 0

@@ -129,6 +129,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4962865180829313045}
+  - component: {fileID: 5989232392238084421}
   m_Layer: 0
   m_Name: AssasinSkeleton
   m_TagString: Untagged
@@ -152,6 +153,18 @@ Transform:
   - {fileID: 4211871611093481841}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5989232392238084421
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4656792572948561748}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 213232923adaf7d4894596293dc5e0b3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &5105435024816714814
 GameObject:
   m_ObjectHideFlags: 0

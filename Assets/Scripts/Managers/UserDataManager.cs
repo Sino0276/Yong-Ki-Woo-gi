@@ -5,6 +5,33 @@ using UnityEngine;
 [System.Serializable]
 public class UserData
 {
+    public StatData statData = new StatData();
+    public StageData stageData = new StageData();
+
+    public int selectedDragonId = 1;
+
+    public void Init()
+    {
+        Load();
+    }
+
+    public void Save()
+    {
+        PlayerPrefs.SetString("UserData", JsonUtility.ToJson(this));
+    }
+
+    public void Load()
+    {
+        if (PlayerPrefs.HasKey("UserData"))
+        {
+            JsonUtility.FromJsonOverwrite(PlayerPrefs.GetString("UserData"), this);
+        }
+    }
+}
+
+[System.Serializable]
+public class StatData
+{
     [Header("Currency")]
     public int coin = 0;
     public int ruby = 0;
@@ -24,17 +51,11 @@ public class UserData
     public int critDmgLevel = 0;
     public int feverLevel = 0;
     public int feverTimeLevel = 0;
+}
 
-    public void Save()
-    {
-        PlayerPrefs.SetString("UserData", JsonUtility.ToJson(this));
-    }
-
-    public void Load()
-    {
-        if (PlayerPrefs.HasKey("UserData"))
-        {
-            JsonUtility.FromJsonOverwrite(PlayerPrefs.GetString("UserData"), this);
-        }
-    }
+[System.Serializable]
+public class StageData
+{
+    public int stage = 0;
+    public int count  = 0;
 }

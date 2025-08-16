@@ -4,10 +4,12 @@ using UnityEngine;
 
 public class DataManager
 {
-    public GameInfo_DragonsDataLoader GameInfo;
+    public GameInfo_DragonsDataLoader DragonData;
+    public GameInfo_EnemyDataLoader EnemyData;
 
     public void Init()
     {
-        GameInfo = new GameInfo_DragonsDataLoader();
+        DragonData = new GameInfo_DragonsDataLoader();
+        EnemyData = new GameInfo_EnemyDataLoader();
     }
 }

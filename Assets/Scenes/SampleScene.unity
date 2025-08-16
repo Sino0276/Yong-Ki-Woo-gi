@@ -215,63 +215,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1001 &799507856
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 905327855282785653, guid: 563a914a1d81fde44be7c3bacb5c5306, type: 3}
-      propertyPath: m_Name
-      value: BabyDragon
-      objectReference: {fileID: 0}
-    - target: {fileID: 7529157448489091963, guid: 563a914a1d81fde44be7c3bacb5c5306, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -6.51
-      objectReference: {fileID: 0}
-    - target: {fileID: 7529157448489091963, guid: 563a914a1d81fde44be7c3bacb5c5306, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7529157448489091963, guid: 563a914a1d81fde44be7c3bacb5c5306, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7529157448489091963, guid: 563a914a1d81fde44be7c3bacb5c5306, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7529157448489091963, guid: 563a914a1d81fde44be7c3bacb5c5306, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7529157448489091963, guid: 563a914a1d81fde44be7c3bacb5c5306, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7529157448489091963, guid: 563a914a1d81fde44be7c3bacb5c5306, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7529157448489091963, guid: 563a914a1d81fde44be7c3bacb5c5306, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7529157448489091963, guid: 563a914a1d81fde44be7c3bacb5c5306, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7529157448489091963, guid: 563a914a1d81fde44be7c3bacb5c5306, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 563a914a1d81fde44be7c3bacb5c5306, type: 3}
 --- !u!1 &1114632271
 GameObject:
   m_ObjectHideFlags: 0
@@ -302,18 +245,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   userData:
-    coin: 0
-    ruby: 0
-    dragonList: 
-    bluePotion: 0
-    yellowPotion: 0
-    redPotion: 0
-    atkLevel: 0
-    atkSpeedLevel: 0
-    critRateLevel: 0
-    critDmgLevel: 0
-    feverLevel: 0
-    feverTimeLevel: 0
+    statData:
+      coin: 0
+      ruby: 0
+      dragonList: 
+      bluePotion: 0
+      yellowPotion: 0
+      redPotion: 0
+      atkLevel: 0
+      atkSpeedLevel: 0
+      critRateLevel: 0
+      critDmgLevel: 0
+      feverLevel: 0
+      feverTimeLevel: 0
+    stageData:
+      stage: 0
+      count: 0
+    selectedDragonId: 1
   gameManager:
     <projectilePrefab>k__BackingField: {fileID: -1991669249113316835, guid: b01984b0982f8ca41af06aa5474b39a8, type: 3}
     <enemySpawnPoint>k__BackingField: {fileID: 1545421096}
@@ -400,7 +348,6 @@ SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 519420032}
-  - {fileID: 799507856}
   - {fileID: 1114632273}
   - {fileID: 1545421097}
   - {fileID: 1712298568}

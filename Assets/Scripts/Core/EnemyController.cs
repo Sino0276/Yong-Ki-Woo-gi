@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -5,6 +6,13 @@ using UnityEngine;
 public class EnemyController : MonoBehaviour, IDamageable
 {
     public float Health { get; private set; }
+
+    public event Action OnDeath;
+
+    public void Init(float health)
+    {
+        Health = health;
+    }
 
     public void TakeDamage(float damage)
     {
@@ -14,6 +22,7 @@ public class EnemyController : MonoBehaviour, IDamageable
 
         if(Health <= 0)
         {
+            OnDeath?.Invoke();
             Destroy(gameObject);
         }
     }

@@ -6,6 +6,11 @@ public class ResourceManager
 {
     private Dictionary<string, Object> resources = new Dictionary<string, Object>();
 
+    public void Init()
+    {
+        
+    }
+
     public T Load<T>(string path) where T : Object
     {
         if (resources.TryGetValue(path, out Object resource))

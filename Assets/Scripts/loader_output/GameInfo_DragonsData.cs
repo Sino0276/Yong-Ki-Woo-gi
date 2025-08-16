@@ -112,7 +112,7 @@ public class GameInfo_DragonsDataLoader
     public List<GameInfo_DragonsData> ItemsList { get; private set; }
     public Dictionary<int, GameInfo_DragonsData> ItemsDict { get; private set; }
 
-    public GameInfo_DragonsDataLoader(string path = "JSON/GameInfo_DragonsData")
+    public GameInfo_DragonsDataLoader(string path = "json_output/GameInfo_DragonsData")
     {
         string jsonData;
         jsonData = Resources.Load<TextAsset>(path).text;

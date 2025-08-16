@@ -18,7 +18,7 @@ public class DragonController : MonoBehaviour
 
     public void Init(int id)
     {
-        DragonData = Managers.Data.GameInfo.GetByKey(id);
+        DragonData = Managers.Data.DragonData.GetByKey(id);
         DragonStats = new DragonStats(DragonData);
         attackHandlers = GetComponentsInChildren<AttackHandler>();
     }
@@ -66,7 +66,7 @@ public class DragonStats
 
     public DragonStats(int id)
     {
-        GameInfo_DragonsData gameInfo = Managers.Data.GameInfo.GetByKey(id);
+        GameInfo_DragonsData gameInfo = Managers.Data.DragonData.GetByKey(id);
         Init(gameInfo.drop, gameInfo.damage, gameInfo.atkSpeed, gameInfo.critRate, gameInfo.minCritDmg, gameInfo.maxCritDmg, gameInfo.fever, gameInfo.feverTime, gameInfo.coinBonus, gameInfo.itemBonus, gameInfo.bluePotionDuration, gameInfo.yellowPotionDuration, gameInfo.redPotionDuration, gameInfo.allPotionDuration);
     }
 

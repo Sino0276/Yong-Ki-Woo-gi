@@ -9,13 +9,21 @@ public class GameManager
     [field: SerializeField] public GameObject enemySpawnPoint { get; private set; }
     [field: SerializeField] public GameObject dragonSpawnPoint { get; private set; }
 
-    public EnemyController Enemy { get; private set; }
     public StageManager StageManager { get; private set; }
+
+    public DragonController Dragon { get; private set; }
 
     public void Init()
     {
-        StageManager = new StageManager();
+        SpawnDragon(Managers.UserData.selectedDragonId);
+        StageManager = new StageManager(this);
     }
 
-    
+    public void SpawnDragon(int id)
+    {
+        GameInfo_DragonsData dragonData = Managers.Data.DragonData.GetByKey(id);
+        DragonController dragon = Managers.Resource.Load<DragonController>(dragonData.prefabPath);
+        Dragon = Object.Instantiate(dragon, dragonSpawnPoint.transform.position, Quaternion.identity);
+        Dragon.Init(id);
+    }
 }

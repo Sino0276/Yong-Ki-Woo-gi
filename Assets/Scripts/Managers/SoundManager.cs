@@ -11,7 +11,7 @@ public class SoundManager
     private float bgmVolume = 1;
     private float sfxVolume = 1;
 
-    private void Init()
+    public void Init()
     {
 
     }

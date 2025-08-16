@@ -37,7 +37,7 @@ public class GameInfo_EnemyDataLoader
     public List<GameInfo_EnemyData> ItemsList { get; private set; }
     public Dictionary<int, GameInfo_EnemyData> ItemsDict { get; private set; }
 
-    public GameInfo_EnemyDataLoader(string path = "JSON/GameInfo_EnemyData")
+    public GameInfo_EnemyDataLoader(string path = "json_output/GameInfo_EnemyData")
     {
         string jsonData;
         jsonData = Resources.Load<TextAsset>(path).text;
