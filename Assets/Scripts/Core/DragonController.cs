@@ -6,10 +6,10 @@ using UnityEngine;
 
 public class DragonController : MonoBehaviour
 {
-    private AttackHandler[] attackHandlers;
-    private int currentAttackHandlerIndex = 0;
-    public DragonStats DragonStats { get; private set; }
-    public GameInfo_DragonsData DragonData { get; private set;}
+    [SerializeField] private AttackHandler[] attackHandlers;
+    [SerializeField] private int currentAttackHandlerIndex = 0;
+    [field: SerializeField] public DragonStats DragonStats { get; private set; }
+    [field: SerializeField] public GameInfo_DragonsData DragonData { get; private set;}
 
     public void Start()
     {

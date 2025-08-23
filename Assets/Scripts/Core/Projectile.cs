@@ -21,7 +21,17 @@ public class Projectile : MonoBehaviour
 
     private void Start()
     {
-        direction = Managers.Game.enemySpawnPoint.transform.position - transform.position;
+        Vector3 targetPosition;
+        if (Managers.Game.StageManager.Enemy != null)
+        {
+            BoxCollider2D boxCollider = Managers.Game.StageManager.Enemy.GetComponent<BoxCollider2D>();
+            targetPosition = boxCollider.bounds.center;
+        }
+        else
+        {
+            targetPosition = Managers.Game.enemySpawnPoint.transform.position;
+        }
+        direction = (targetPosition - transform.position).normalized;
         StartCoroutine(ProjectileAnimation());
     }
 

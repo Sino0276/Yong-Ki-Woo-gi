@@ -266,6 +266,37 @@ MonoBehaviour:
     <projectilePrefab>k__BackingField: {fileID: -1991669249113316835, guid: b01984b0982f8ca41af06aa5474b39a8, type: 3}
     <enemySpawnPoint>k__BackingField: {fileID: 1545421096}
     <dragonSpawnPoint>k__BackingField: {fileID: 1712298567}
+    <StageManager>k__BackingField:
+      gameManager:
+        <projectilePrefab>k__BackingField: {fileID: 0}
+        <enemySpawnPoint>k__BackingField: {fileID: 0}
+        <dragonSpawnPoint>k__BackingField: {fileID: 0}
+        <StageManager>k__BackingField:
+          gameManager:
+            <projectilePrefab>k__BackingField: {fileID: 0}
+            <enemySpawnPoint>k__BackingField: {fileID: 0}
+            <dragonSpawnPoint>k__BackingField: {fileID: 0}
+            <StageManager>k__BackingField:
+              gameManager:
+                <projectilePrefab>k__BackingField: {fileID: 0}
+                <enemySpawnPoint>k__BackingField: {fileID: 0}
+                <dragonSpawnPoint>k__BackingField: {fileID: 0}
+                <StageManager>k__BackingField:
+                  gameManager:
+                    <projectilePrefab>k__BackingField: {fileID: 0}
+                    <enemySpawnPoint>k__BackingField: {fileID: 0}
+                    <dragonSpawnPoint>k__BackingField: {fileID: 0}
+                    <StageManager>k__BackingField:
+                      <Enemy>k__BackingField: {fileID: 0}
+                    <Dragon>k__BackingField: {fileID: 0}
+                  <Enemy>k__BackingField: {fileID: 0}
+                <Dragon>k__BackingField: {fileID: 0}
+              <Enemy>k__BackingField: {fileID: 0}
+            <Dragon>k__BackingField: {fileID: 0}
+          <Enemy>k__BackingField: {fileID: 0}
+        <Dragon>k__BackingField: {fileID: 0}
+      <Enemy>k__BackingField: {fileID: 0}
+    <Dragon>k__BackingField: {fileID: 0}
 --- !u!4 &1114632273
 Transform:
   m_ObjectHideFlags: 0

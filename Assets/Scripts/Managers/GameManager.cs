@@ -9,9 +9,9 @@ public class GameManager
     [field: SerializeField] public GameObject enemySpawnPoint { get; private set; }
     [field: SerializeField] public GameObject dragonSpawnPoint { get; private set; }
 
-    public StageManager StageManager { get; private set; }
+    [field: SerializeField] public StageManager StageManager { get; private set; }
 
-    public DragonController Dragon { get; private set; }
+    [field: SerializeField] public DragonController Dragon { get; private set; }
 
     public void Init()
     {

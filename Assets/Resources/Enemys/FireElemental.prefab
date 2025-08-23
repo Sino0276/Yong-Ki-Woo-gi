@@ -346,6 +346,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5692045442525554276}
   - component: {fileID: 586046679476076927}
+  - component: {fileID: -7474360921387382350}
   m_Layer: 0
   m_Name: FireElemental
   m_TagString: Untagged
@@ -381,6 +382,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 213232923adaf7d4894596293dc5e0b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!65 &-7474360921387382350
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5397245325441444477}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 2.134804, y: 2.4563317, z: 1}
+  m_Center: {x: 0.00000011920929, y: 1.1253474, z: 0}
 --- !u!1 &7779709311348509607
 GameObject:
   m_ObjectHideFlags: 0

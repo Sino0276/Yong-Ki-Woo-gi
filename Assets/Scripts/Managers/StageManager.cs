@@ -1,11 +1,15 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Object = UnityEngine.Object;
+using Random = UnityEngine.Random;
 
+[Serializable]
 public class StageManager
 {
-    private GameManager gameManager;
-    public EnemyController Enemy { get; private set; }
+    [field: SerializeField] private GameManager gameManager;
+    [field: SerializeField] public EnemyController Enemy { get; private set; }
 
     public StageManager(GameManager gameManager)
     {
