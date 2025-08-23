@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class EnemyController : MonoBehaviour, IDamageable
 {
-    public float Health { get; private set; }
+    [field: SerializeField] public float Health { get; private set; }
 
     public event Action OnDeath;
 

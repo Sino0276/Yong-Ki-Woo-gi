@@ -252,14 +252,14 @@ MonoBehaviour:
       bluePotion: 0
       yellowPotion: 0
       redPotion: 0
-      atkLevel: 0
-      atkSpeedLevel: 0
-      critRateLevel: 0
-      critDmgLevel: 0
-      feverLevel: 0
-      feverTimeLevel: 0
+      atkLevel: 1
+      atkSpeedLevel: 1
+      critRateLevel: 1
+      critDmgLevel: 1
+      feverLevel: 1
+      feverTimeLevel: 1
     stageData:
-      stage: 0
+      stage: 1
       count: 0
     selectedDragonId: 1
   gameManager:
@@ -267,34 +267,6 @@ MonoBehaviour:
     <enemySpawnPoint>k__BackingField: {fileID: 1545421096}
     <dragonSpawnPoint>k__BackingField: {fileID: 1712298567}
     <StageManager>k__BackingField:
-      gameManager:
-        <projectilePrefab>k__BackingField: {fileID: 0}
-        <enemySpawnPoint>k__BackingField: {fileID: 0}
-        <dragonSpawnPoint>k__BackingField: {fileID: 0}
-        <StageManager>k__BackingField:
-          gameManager:
-            <projectilePrefab>k__BackingField: {fileID: 0}
-            <enemySpawnPoint>k__BackingField: {fileID: 0}
-            <dragonSpawnPoint>k__BackingField: {fileID: 0}
-            <StageManager>k__BackingField:
-              gameManager:
-                <projectilePrefab>k__BackingField: {fileID: 0}
-                <enemySpawnPoint>k__BackingField: {fileID: 0}
-                <dragonSpawnPoint>k__BackingField: {fileID: 0}
-                <StageManager>k__BackingField:
-                  gameManager:
-                    <projectilePrefab>k__BackingField: {fileID: 0}
-                    <enemySpawnPoint>k__BackingField: {fileID: 0}
-                    <dragonSpawnPoint>k__BackingField: {fileID: 0}
-                    <StageManager>k__BackingField:
-                      <Enemy>k__BackingField: {fileID: 0}
-                    <Dragon>k__BackingField: {fileID: 0}
-                  <Enemy>k__BackingField: {fileID: 0}
-                <Dragon>k__BackingField: {fileID: 0}
-              <Enemy>k__BackingField: {fileID: 0}
-            <Dragon>k__BackingField: {fileID: 0}
-          <Enemy>k__BackingField: {fileID: 0}
-        <Dragon>k__BackingField: {fileID: 0}
       <Enemy>k__BackingField: {fileID: 0}
     <Dragon>k__BackingField: {fileID: 0}
 --- !u!4 &1114632273

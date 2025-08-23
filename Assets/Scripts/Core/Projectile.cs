@@ -12,11 +12,14 @@ public class Projectile : MonoBehaviour
     [SerializeField] private SpriteRenderer spriteRenderer;
     [SerializeField] private float speed = 1f;
 
+    // ReSharper disable Unity.PerformanceAnalysis
     public void Init(float damage, bool isCritical, List<Sprite> projectileSprites)
     {
         this.damage = damage;
         this.isCritical = isCritical;
         this.projectileSprites = projectileSprites;
+        
+        BoxCollider2D boxCollider = GetComponent<BoxCollider2D>();
     }
 
     private void Start()

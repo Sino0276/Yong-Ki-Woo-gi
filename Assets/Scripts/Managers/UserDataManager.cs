@@ -45,17 +45,17 @@ public class StatData
     public int redPotion = 0;
 
     [Header("Upgrade")]
-    public int atkLevel = 0;
-    public int atkSpeedLevel = 0;
-    public int critRateLevel = 0;
-    public int critDmgLevel = 0;
-    public int feverLevel = 0;
-    public int feverTimeLevel = 0;
+    public int atkLevel = 1;
+    public int atkSpeedLevel = 1;
+    public int critRateLevel = 1;
+    public int critDmgLevel = 1;
+    public int feverLevel = 1;
+    public int feverTimeLevel = 1;
 }
 
 [System.Serializable]
 public class StageData
 {
-    public int stage = 0;
+    public int stage = 1;
     public int count  = 0;
 }

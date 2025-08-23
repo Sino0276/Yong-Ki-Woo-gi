@@ -8,7 +8,7 @@ using Random = UnityEngine.Random;
 [Serializable]
 public class StageManager
 {
-    [field: SerializeField] private GameManager gameManager;
+    private GameManager gameManager;
     [field: SerializeField] public EnemyController Enemy { get; private set; }
 
     public StageManager(GameManager gameManager)
