@@ -31,6 +31,11 @@ public class GameInfo_EnemyData
     /// </summary>
     public int coin;
 
+    /// <summary>
+    /// DropBonus
+    /// </summary>
+    public float dropBonus;
+
 }
 public class GameInfo_EnemyDataLoader
 {

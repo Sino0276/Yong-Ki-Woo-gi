@@ -10,6 +10,7 @@ public class StageManager
 {
     private GameManager gameManager;
     [field: SerializeField] public EnemyController Enemy { get; private set; }
+    private bool isBoss = false;
 
     public StageManager(GameManager gameManager)
     {
@@ -29,7 +30,11 @@ public class StageManager
     private void OnEnemyDeath()
     {
         Managers.UserData.stageData.count++;
-        if(Managers.UserData.stageData.count >= 10)
+        if (Enemy.gameObject.tag == "Boss")
+        {
+            
+        }
+        else if(Managers.UserData.stageData.count >= 10)
         {
             Managers.UserData.stageData.count = 0;
             Managers.UserData.stageData.stage++;

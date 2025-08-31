@@ -5,126 +5,144 @@
       "name": "일반 고블린",
       "prefabPath": "Enemys/NormalGoblin",
       "hp": 6,
-      "coin": 6
+      "coin": 6,
+      "dropBonus": 0
     },
     {
       "key": 1002,
       "name": "병사 고블린",
       "prefabPath": "Enemys/SoldierGoblin",
       "hp": 8,
-      "coin": 8
+      "coin": 8,
+      "dropBonus": 0.01
     },
     {
       "key": 1003,
       "name": "마법사 고블린",
       "prefabPath": "Enemys/WizardGoblin",
       "hp": 10,
-      "coin": 10
+      "coin": 10,
+      "dropBonus": 0.02
     },
     {
       "key": 1004,
       "name": "일반 슬라임",
       "prefabPath": "Enemys/NormalSlime",
       "hp": 5,
-      "coin": 5
+      "coin": 5,
+      "dropBonus": 0.03
     },
     {
       "key": 1005,
       "name": "여자 슬라임",
       "prefabPath": "Enemys/FemaleSlime",
       "hp": 8,
-      "coin": 8
+      "coin": 8,
+      "dropBonus": 0.04
     },
     {
       "key": 1006,
       "name": "독 슬라임",
       "prefabPath": "Enemys/PoisonSlime",
       "hp": 10,
-      "coin": 10
+      "coin": 10,
+      "dropBonus": 0.05
     },
     {
       "key": 1007,
       "name": "날개 슬라임",
       "prefabPath": "Enemys/WingSlime",
       "hp": 12,
-      "coin": 12
+      "coin": 12,
+      "dropBonus": 0.06
     },
     {
       "key": 1008,
       "name": "킹 슬라임",
       "prefabPath": "Enemys/KingSlime",
       "hp": 14,
-      "coin": 14
+      "coin": 14,
+      "dropBonus": 0.07
     },
     {
       "key": 1009,
       "name": "일반 스켈레톤",
       "prefabPath": "Enemys/NormalSkeleton",
       "hp": 6,
-      "coin": 6
+      "coin": 6,
+      "dropBonus": 0.08
     },
     {
       "key": 1010,
       "name": "병사 스켈레톤",
       "prefabPath": "Enemys/SoldierlSkeleton",
       "hp": 10,
-      "coin": 10
+      "coin": 10,
+      "dropBonus": 0.09
     },
     {
       "key": 1011,
       "name": "암살자 스켈레톤",
       "prefabPath": "Enemys/AssasinSkeleton",
       "hp": 14,
-      "coin": 14
+      "coin": 14,
+      "dropBonus": 0.1
     },
     {
       "key": 1012,
       "name": "불 원소",
       "prefabPath": "Enemys/FireElemental",
       "hp": 25,
-      "coin": 25
+      "coin": 25,
+      "dropBonus": 0.11
     },
     {
       "key": 1013,
       "name": "물 원소",
       "prefabPath": "Enemys/WaterElemental",
       "hp": 25,
-      "coin": 25
+      "coin": 25,
+      "dropBonus": 0.12
     },
     {
       "key": 1014,
       "name": "얼음 원소",
       "prefabPath": "Enemys/IceElemental",
       "hp": 25,
-      "coin": 25
+      "coin": 25,
+      "dropBonus": 0.13
     },
     {
       "key": 1015,
       "name": "번개 원소",
       "prefabPath": "Enemys/ElectricityElemental",
       "hp": 25,
-      "coin": 25
+      "coin": 25,
+      "dropBonus": 0.14
     },
     {
       "key": 1016,
       "name": "일반 오크",
       "prefabPath": "Enemys/NormalOrc",
       "hp": 10,
-      "coin": 10
+      "coin": 10,
+      "dropBonus": 0.15
     },
     {
       "key": 1017,
       "name": "오크 전사",
       "prefabPath": "Enemys/SoldierOrc",
       "hp": 16,
-      "coin": 16
+      "coin": 16,
+      "dropBonus": 0.16
     },
     {
       "key": 1018,
       "name": "주술사 오크",
       "prefabPath": "Enemys/WizardOrc",
       "hp": 20,
-      "coin": 20
+      "coin": 20,
+      "dropBonus": 0.17
     }
   ]
 }
