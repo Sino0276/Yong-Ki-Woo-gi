@@ -44,5 +44,24 @@ public class Managers : Singleton<Managers>
         utilityManager.Init();
         gameManager.Init();
     }
+
+    public new Coroutine StartCoroutine(IEnumerator coroutine)
+    {
+        return base.StartCoroutine(coroutine);
+    }
+
+    public new void StopCoroutine(IEnumerator coroutine)
+    {
+        base.StopCoroutine(coroutine);
+    }
+
+    [ContextMenu("Reset")]
+    public void Reset() => userData.Reset();
+    
+    [ContextMenu("Save")]
+    public void Save() => userData.Save();
+
+    [ContextMenu("Load")]
+    public void Load() => userData.Load();
 }
 

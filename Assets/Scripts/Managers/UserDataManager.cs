@@ -15,6 +15,14 @@ public class UserData
         Load();
     }
 
+    public void Reset()
+    {
+        statData = new StatData();
+        stageData = new StageData();
+        selectedDragonId = 1;
+        Save();
+    }
+
     public void Save()
     {
         PlayerPrefs.SetString("UserData", JsonUtility.ToJson(this));
@@ -37,7 +45,7 @@ public class StatData
     public int ruby = 0;
 
     [Header("Dragon")]
-    public List<int> dragonList = new List<int>();
+    public List<int> dragonList = new List<int>(){1};
 
     [Header("Potion")]
     public int bluePotion = 0;

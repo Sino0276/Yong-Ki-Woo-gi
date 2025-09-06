@@ -5,25 +5,32 @@ using UnityEngine;
 
 public class EnemyController : MonoBehaviour, IDamageable
 {
+    [field: SerializeField] public int id { get; private set; }
     [field: SerializeField] public float Health { get; private set; }
+    [field: SerializeField] public bool isBoss { get; private set; }
+    [field: SerializeField] public bool isDead { get; private set; }
 
-    public event Action OnDeath;
+    public event Action<bool> OnDeath;
 
-    public void Init(float health)
+    public void Init(int id, float health, bool isBoss)
     {
-        Health = health;
+        this.id = id;
+        Health = isBoss ? health * 10f : health;
+        this.isBoss = isBoss;
     }
 
     public void TakeDamage(float damage)
     {
         if(damage <= 0) return;
+        if(isDead) return;
 
         Health -= damage;
 
         if(Health <= 0)
         {
-            OnDeath?.Invoke();
-            Destroy(gameObject);
+            OnDeath?.Invoke(isBoss);
+            isDead = true;
+            Destroy(gameObject, Time.deltaTime);
         }
     }
 }
