@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [System.Serializable]
-public class GameManager
+public class GameManager : Singleton<GameManager>
 {
     [field: SerializeField] public Projectile projectilePrefab { get; private set; }
     [field: SerializeField] public GameObject enemySpawnPoint { get; private set; }
@@ -13,7 +13,11 @@ public class GameManager
 
     [field: SerializeField] public DragonController Dragon { get; private set; }
 
-    public void Init()
+    public static StageManager Stage => Instance.StageManager;
+    public static GameObject EnemySpawnPoint => Instance.enemySpawnPoint;
+    public static GameObject DragonSpawnPoint => Instance.dragonSpawnPoint;
+
+    public void Start()
     {
         SpawnDragon(Managers.UserData.selectedDragonId);
         StageManager = new StageManager(this);

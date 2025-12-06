@@ -15,7 +15,6 @@ public class Managers : Singleton<Managers>
     [SerializeField] private DataManager dataManager = new DataManager();
     [SerializeField] private UserData userData = new UserData();
     [SerializeField] private UtilityManager utilityManager = new UtilityManager();
-    [SerializeField] private GameManager gameManager = new GameManager();
 
     public static PoolManager Pool => Instance.poolManager;
     public static SoundManager Sound => Instance.soundManager;
@@ -24,7 +23,6 @@ public class Managers : Singleton<Managers>
     public static DataManager Data => Instance.dataManager;
     public static UserData UserData => Instance.userData;
     public static UtilityManager Utility => Instance.utilityManager;
-    public static GameManager Game => Instance.gameManager;
 
     protected override void Awake()
     {
@@ -42,7 +40,6 @@ public class Managers : Singleton<Managers>
         uiManager.Init();
         resourceManager.Init();
         utilityManager.Init();
-        gameManager.Init();
     }
 
     public new Coroutine StartCoroutine(IEnumerator coroutine)

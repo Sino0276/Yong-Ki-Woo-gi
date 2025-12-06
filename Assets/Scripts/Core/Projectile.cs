@@ -25,14 +25,14 @@ public class Projectile : MonoBehaviour
     private void Start()
     {
         Vector3 targetPosition;
-        if (Managers.Game.StageManager.Enemy != null)
+        if (GameManager.Stage.Enemy != null)
         {
-            BoxCollider2D boxCollider = Managers.Game.StageManager.Enemy.GetComponent<BoxCollider2D>();
+            BoxCollider2D boxCollider = GameManager.Stage.Enemy.GetComponent<BoxCollider2D>();
             targetPosition = boxCollider.bounds.center;
         }
         else
         {
-            targetPosition = Managers.Game.enemySpawnPoint.transform.position;
+            targetPosition = GameManager.EnemySpawnPoint.transform.position;
         }
         direction = (targetPosition - transform.position).normalized;
         StartCoroutine(ProjectileAnimation());
