@@ -7,7 +7,7 @@ public class DamageCalculator
     public float CalculateDamage(DragonController dragonController, out bool isCritical)
     {
         int atkLevel = Managers.UserData.statData.atkLevel;
-        float damage = (atkLevel + (atkLevel * 0.6f)) * dragonController.DragonStats.damageRate;
+        float damage = atkLevel * 1.6f * dragonController.DragonStats.damageRate;
 
         int critRateLevel = Managers.UserData.statData.critRateLevel;
         float critRate = (critRateLevel * 1.5f) * dragonController.DragonStats.criticalRate;

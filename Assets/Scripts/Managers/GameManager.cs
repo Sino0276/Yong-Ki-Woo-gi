@@ -20,7 +20,12 @@ public class GameManager : Singleton<GameManager>
     public void Start()
     {
         SpawnDragon(Managers.UserData.selectedDragonId);
-        StageManager = new StageManager(this);
+        StageManager.Init(this);
+    }
+
+    public void Update()
+    {
+        StageManager.Update();
     }
 
     public void SpawnDragon(int id)

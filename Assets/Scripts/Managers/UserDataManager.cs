@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -42,6 +43,16 @@ public class StatData
 {
     [Header("Currency")]
     public int coin = 0;
+    public int Coin
+    {
+        get => coin;
+        set {
+            coin = value;
+            OnCoinChanged?.Invoke(coin);
+        }
+    }
+    public event Action<int> OnCoinChanged;
+
     public int ruby = 0;
 
     [Header("Dragon")]

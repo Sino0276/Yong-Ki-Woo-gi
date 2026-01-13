@@ -9,30 +9,40 @@ using Random = UnityEngine.Random;
 public class StageManager
 {
     private GameManager gameManager;
+    [SerializeField] private BossUI bossUI;
     [field: SerializeField] public EnemyController Enemy { get; private set; }
     public bool isStageClear = false;
     public bool allowBossSpawn = true;
+    public int bossTimeLimit = 10;
 
     private Coroutine timerCoroutine;
 
-    public StageManager(GameManager gameManager)
+    public float currentTime = 0;
+
+    public void Init(GameManager gameManager)
     {
         this.gameManager = gameManager;
         SpawnEnemy(GetRandomEnemyId());
     }
 
+    public void Update()
+    {
+
+    }
+
     private void SpawnEnemy(int id, bool isBoss = false)
     {
-        if (isBoss)
-        {
-            timerCoroutine = Managers.Instance.StartCoroutine(Timer(10));
-        }
-
         GameInfo_EnemyData enemyData = Managers.Data.EnemyData.GetByKey(id);
         EnemyController enemy = Managers.Resource.Load<EnemyController>(enemyData.prefabPath);
         Enemy = Object.Instantiate(enemy, gameManager.enemySpawnPoint.transform.position, Quaternion.identity);
         Enemy.Init(id, enemyData.hp * Managers.UserData.stageData.stage, isBoss);
         Enemy.OnDeath += OnEnemyDeath;
+
+        if (isBoss)
+        {
+            timerCoroutine = Managers.Instance.StartCoroutine(Timer(bossTimeLimit));
+            bossUI.SetBossUI(Enemy);
+        }
     }
 
     private void OnEnemyDeath(bool isBoss)
@@ -56,7 +66,7 @@ public class StageManager
     private void Reward(int enemyId)
     {
         GameInfo_EnemyData enemyData = Managers.Data.EnemyData.GetByKey(enemyId);
-        Managers.UserData.statData.coin += (int)(enemyData.coin * gameManager.Dragon.DragonStats.coinBonus * Managers.UserData.stageData.stage);
+        Managers.UserData.statData.Coin += (int)(enemyData.coin * gameManager.Dragon.DragonStats.coinBonus * Managers.UserData.stageData.stage);
         if(Enemy.isBoss) RandomDragonReward();
     }
 
@@ -96,8 +106,13 @@ public class StageManager
 
     private IEnumerator Timer(int time)
     {
+        currentTime = 0;
         Debug.Log("Timer Start");
-        yield return new WaitForSeconds(time);
+        while(currentTime < time)
+        {
+            currentTime += Time.deltaTime;
+            yield return null;
+        }
         Debug.Log("Timer End");
         allowBossSpawn = false;
 

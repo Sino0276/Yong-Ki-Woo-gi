@@ -72,7 +72,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 300
   m_Sprite: {fileID: 21300000, guid: 0c1553b505e24c64ca99c489073a6528, type: 2}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -156,7 +156,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 300
   m_Sprite: {fileID: 21300000, guid: e9b776139546ac24aac75ebf1bb6c5c2, type: 2}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -236,6 +236,29 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 06d99725ba6cef842a30fede48d1f5e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  attackHandlers: []
+  currentAttackHandlerIndex: 0
+  <DragonData>k__BackingField:
+    key: 0
+    name: 
+    description: 
+    iconPath: 
+    prefabPath: 
+    projectileSpritePath: []
+    drop: 0
+    damage: 0
+    atkSpeed: 0
+    critRate: 0
+    minCritDmg: 0
+    maxCritDmg: 0
+    fever: 0
+    feverTime: 0
+    coinBonus: 0
+    itemBonus: 0
+    bluePotionDuration: 0
+    yellowPotionDuration: 0
+    redPotionDuration: 0
+    allPotionDuration: 0
 --- !u!1 &4302373397683176123
 GameObject:
   m_ObjectHideFlags: 0
@@ -342,7 +365,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 300
   m_Sprite: {fileID: 21300000, guid: 86c2df8ab36ee954588e9cdc3d8c8511, type: 2}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -428,7 +451,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 300
   m_Sprite: {fileID: 21300000, guid: be2f0de0dcfbff647bcfe5cda2f5c1a7, type: 2}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0

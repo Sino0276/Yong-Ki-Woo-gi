@@ -11,6 +11,7 @@ public class EnemyController : MonoBehaviour, IDamageable
     [field: SerializeField] public bool isDead { get; private set; }
 
     public event Action<bool> OnDeath;
+    public event Action<float> OnHealthChange;
 
     public void Init(int id, float health, bool isBoss)
     {
@@ -25,6 +26,7 @@ public class EnemyController : MonoBehaviour, IDamageable
         if(isDead) return;
 
         Health -= damage;
+        OnHealthChange?.Invoke(Health);
 
         if(Health <= 0)
         {
