@@ -7,6 +7,6 @@ public class CurrencyUI : MonoBehaviour
 
     public void FixedUpdate()
     {
-        coinText.text = Managers.UserData.statData.Coin.ToString();
+        coinText.text = Managers.User.Currency.Coin.ToString();
     }
 }

@@ -8,7 +8,7 @@ public class StageUI : MonoBehaviour
 
     public void FixedUpdate()
     {
-        stageText.text = Managers.UserData.stageData.stage.ToString();
-        countText.text = Managers.UserData.stageData.count.ToString() + "/10";
+        stageText.text = Managers.User.Stage.CurrentStage.ToString();
+        countText.text = Managers.User.Stage.CurrentCount.ToString() + "/10";
     }
 }

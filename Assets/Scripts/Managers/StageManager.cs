@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using Object = UnityEngine.Object;
 using Random = UnityEngine.Random;
@@ -35,7 +36,7 @@ public class StageManager
         GameInfo_EnemyData enemyData = Managers.Data.EnemyData.GetByKey(id);
         EnemyController enemy = Managers.Resource.Load<EnemyController>(enemyData.prefabPath);
         Enemy = Object.Instantiate(enemy, gameManager.enemySpawnPoint.transform.position, Quaternion.identity);
-        Enemy.Init(id, enemyData.hp * Managers.UserData.stageData.stage, isBoss);
+        Enemy.Init(id, enemyData.hp * Managers.User.Stage.CurrentStage.Value, isBoss);
         Enemy.OnDeath += OnEnemyDeath;
 
         if (isBoss)
@@ -54,19 +55,19 @@ public class StageManager
             OnClearStage();
             Managers.Instance.StopCoroutine(timerCoroutine);
         }
-        else if (Managers.UserData.stageData.count < 10)
+        else if (Managers.User.Stage.CurrentCount.Value < 10)
         {
-            Managers.UserData.stageData.count++;
+            Managers.User.Stage.CurrentCount.Value++;
         }
 
-        SpawnEnemy(GetRandomEnemyId(), Managers.UserData.stageData.count == 10 && allowBossSpawn);
-        Managers.UserData.Save();
+        SpawnEnemy(GetRandomEnemyId(), Managers.User.Stage.CurrentCount.Value == 10 && allowBossSpawn);
+        Managers.User.Save();
     }
 
     private void Reward(int enemyId)
     {
         GameInfo_EnemyData enemyData = Managers.Data.EnemyData.GetByKey(enemyId);
-        Managers.UserData.statData.Coin += (int)(enemyData.coin * gameManager.Dragon.DragonStats.coinBonus * Managers.UserData.stageData.stage);
+        Managers.User.Currency.Coin.Value += (int)(enemyData.coin * gameManager.Dragon.DragonStats.coinBonus * Managers.User.Stage.CurrentStage.Value);
         if(Enemy.isBoss) RandomDragonReward();
     }
 
@@ -84,9 +85,9 @@ public class StageManager
                 break;
             }
 
-            if (Managers.UserData.statData.dragonList.Contains(dragonData[i].key)) continue;
+            if (Managers.User.Dragon.DragonList.Contains(dragonData[i].key)) continue;
 
-            Managers.UserData.statData.dragonList.Add(dragonData[i].key);
+            Managers.User.Dragon.AddDragon(dragonData[i].key);
             Debug.Log("Dragon Drop Success");
             break;
         }
@@ -94,8 +95,8 @@ public class StageManager
 
     private void OnClearStage()
     {
-        Managers.UserData.stageData.count = 0;
-        Managers.UserData.stageData.stage++;
+        Managers.User.Stage.CurrentCount.Value = 0;
+        Managers.User.Stage.CurrentStage.Value++;
         isStageClear = true;
     }
 

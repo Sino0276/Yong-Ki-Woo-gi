@@ -11,6 +11,7 @@ public class GameManager : Singleton<GameManager>
 
     [field: SerializeField] public StageManager StageManager { get; private set; }
 
+
     [field: SerializeField] public DragonController Dragon { get; private set; }
 
     public static StageManager Stage => Instance.StageManager;
@@ -19,7 +20,7 @@ public class GameManager : Singleton<GameManager>
 
     public void Start()
     {
-        SpawnDragon(Managers.UserData.selectedDragonId);
+        SpawnDragon(Managers.User.CurrentDragonId);
         StageManager.Init(this);
     }
 
