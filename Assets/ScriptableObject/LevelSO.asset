@@ -12,147 +12,297 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4222d9791a0c5e7499c85086cfd8ea36, type: 3}
   m_Name: LevelSO
   m_EditorClassIdentifier: 
-  <DamageCurve>k__BackingField:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0.00020619387
-      outSlope: 0.00020619387
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0
-      outWeight: 0.12855464
-    - serializedVersion: 3
-      time: 6050
-      value: 30
-      inSlope: 0.014662634
-      outSlope: 0.014662634
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.029709049
-      outWeight: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  <AttackSpeedCurve>k__BackingField:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0.00020619387
-      outSlope: 0.00020619387
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0
-      outWeight: 0.12855464
-    - serializedVersion: 3
-      time: 90
-      value: 30
-      inSlope: 0.014662634
-      outSlope: 0.014662634
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.029709049
-      outWeight: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  <CriticalRateCurve>k__BackingField:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0.00020619387
-      outSlope: 0.00020619387
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0
-      outWeight: 0.12855464
-    - serializedVersion: 3
-      time: 10
-      value: 30
-      inSlope: 0.014662634
-      outSlope: 0.014662634
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.029709049
-      outWeight: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  <CriticalDamageCurve>k__BackingField:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0.00020619387
-      outSlope: 0.00020619387
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0
-      outWeight: 0.12855464
-    - serializedVersion: 3
-      time: 10
-      value: 30
-      inSlope: 0.014662634
-      outSlope: 0.014662634
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.029709049
-      outWeight: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  <FeverCurve>k__BackingField:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0.00020619387
-      outSlope: 0.00020619387
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0
-      outWeight: 0.12855464
-    - serializedVersion: 3
-      time: 5
-      value: 30
-      inSlope: 0.014662634
-      outSlope: 0.014662634
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.029709049
-      outWeight: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  <FeverTimeCurve>k__BackingField:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0.00020619387
-      outSlope: 0.00020619387
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0
-      outWeight: 0.12855464
-    - serializedVersion: 3
-      time: 20
-      value: 30
-      inSlope: 0.014662634
-      outSlope: 0.014662634
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.029709049
-      outWeight: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
+  <AtkSO>k__BackingField:
+    <AtkCurve>k__BackingField:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 1
+        inSlope: 0.00020619387
+        outSlope: 0.00020619387
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0.12855464
+      - serializedVersion: 3
+        time: 6050
+        value: 30
+        inSlope: 0.014662634
+        outSlope: 0.014662634
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.029709049
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    <AtkPriceCurve>k__BackingField:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 1
+        inSlope: 0.00020619387
+        outSlope: 0.00020619387
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0.12855464
+      - serializedVersion: 3
+        time: 6050
+        value: 30
+        inSlope: 0.014662634
+        outSlope: 0.014662634
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.029709049
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+  <AtkSpeedSO>k__BackingField:
+    <AtkSpeedCurve>k__BackingField:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 1
+        inSlope: 0.00020619387
+        outSlope: 0.00020619387
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0.12855464
+      - serializedVersion: 3
+        time: 90
+        value: 30
+        inSlope: 0.014662634
+        outSlope: 0.014662634
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.029709049
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    <AtkSpeedPriceCurve>k__BackingField:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 1
+        inSlope: 0.00020619387
+        outSlope: 0.00020619387
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0.12855464
+      - serializedVersion: 3
+        time: 90
+        value: 30
+        inSlope: 0.014662634
+        outSlope: 0.014662634
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.029709049
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+  <CritRateSO>k__BackingField:
+    <CritRateCurve>k__BackingField:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 1
+        inSlope: 0.00020619387
+        outSlope: 0.00020619387
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0.12855464
+      - serializedVersion: 3
+        time: 10
+        value: 30
+        inSlope: 0.014662634
+        outSlope: 0.014662634
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.029709049
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    <CritRatePriceCurve>k__BackingField:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 1
+        inSlope: 0.00020619387
+        outSlope: 0.00020619387
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0.12855464
+      - serializedVersion: 3
+        time: 10
+        value: 30
+        inSlope: 0.014662634
+        outSlope: 0.014662634
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.029709049
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+  <CritDmgSO>k__BackingField:
+    <CritDmgCurve>k__BackingField:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 1
+        inSlope: 0.00020619387
+        outSlope: 0.00020619387
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0.12855464
+      - serializedVersion: 3
+        time: 10
+        value: 30
+        inSlope: 0.014662634
+        outSlope: 0.014662634
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.029709049
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    <CritDmgPriceCurve>k__BackingField:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 1
+        inSlope: 0.00020619387
+        outSlope: 0.00020619387
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0.12855464
+      - serializedVersion: 3
+        time: 10
+        value: 30
+        inSlope: 0.014662634
+        outSlope: 0.014662634
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.029709049
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+  <FeverSO>k__BackingField:
+    <FeverCurve>k__BackingField:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 1
+        inSlope: 0.00020619387
+        outSlope: 0.00020619387
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0.12855464
+      - serializedVersion: 3
+        time: 5
+        value: 30
+        inSlope: 0.014662634
+        outSlope: 0.014662634
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.029709049
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    <FeverPriceCurve>k__BackingField:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 1
+        inSlope: 0.00020619387
+        outSlope: 0.00020619387
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0.12855464
+      - serializedVersion: 3
+        time: 5
+        value: 30
+        inSlope: 0.014662634
+        outSlope: 0.014662634
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.029709049
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+  <FeverTimeSO>k__BackingField:
+    <FeverTimeCurve>k__BackingField:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 1
+        inSlope: 0.00020619387
+        outSlope: 0.00020619387
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0.12855464
+      - serializedVersion: 3
+        time: 20
+        value: 30
+        inSlope: 0.014662634
+        outSlope: 0.014662634
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.029709049
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    <FeverTimePriceCurve>k__BackingField:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 1
+        inSlope: 0.00020619387
+        outSlope: 0.00020619387
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0.12855464
+      - serializedVersion: 3
+        time: 20
+        value: 30
+        inSlope: 0.014662634
+        outSlope: 0.014662634
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.029709049
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4

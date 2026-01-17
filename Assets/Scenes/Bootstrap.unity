@@ -152,24 +152,55 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e7114fadbba6bc146b67b9ead96da592, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  userData:
-    statData:
-      coin: 0
-      ruby: 0
-      dragonList: 
-      bluePotion: 0
-      yellowPotion: 0
-      redPotion: 0
-      atkLevel: 1
-      atkSpeedLevel: 1
-      critRateLevel: 1
-      critDmgLevel: 1
-      feverLevel: 1
-      feverTimeLevel: 1
-    stageData:
-      stage: 1
-      count: 0
-    selectedDragonId: 1
+  isDontDestroyOnLoad: 1
+  dataManager:
+    <LevelSO>k__BackingField: {fileID: 11400000, guid: b1d3da5b40acc5d41a49c4db72b4bb92, type: 2}
+  userManager:
+    <Currency>k__BackingField:
+      <Coin>k__BackingField:
+        value: 0
+      <Ruby>k__BackingField:
+        value: 0
+    <StatLevel>k__BackingField:
+      <Atk>k__BackingField:
+        value: 0
+      <AtkSpeed>k__BackingField:
+        value: 0
+      <CritRate>k__BackingField:
+        value: 0
+      <CritDmg>k__BackingField:
+        value: 0
+      <Fever>k__BackingField:
+        value: 0
+      <FeverTime>k__BackingField:
+        value: 0
+    <CurrentStat>k__BackingField:
+      <Atk>k__BackingField:
+        value: 0
+      <AtkSpeed>k__BackingField:
+        value: 0
+      <CritRate>k__BackingField:
+        value: 0
+      <CritDmg>k__BackingField:
+        value: 0
+      <Fever>k__BackingField:
+        value: 0
+      <FeverTime>k__BackingField:
+        value: 0
+    <Stage>k__BackingField:
+      <CurrentStage>k__BackingField:
+        value: 0
+      <CurrentCount>k__BackingField:
+        value: 0
+    <Consumable>k__BackingField:
+      <BluePotion>k__BackingField:
+        value: 0
+      <YellowPotion>k__BackingField:
+        value: 0
+      <RedPotion>k__BackingField:
+        value: 0
+    <CurrentDragonId>k__BackingField: 1
+  isInitialized: 0
 --- !u!4 &797792120
 Transform:
   m_ObjectHideFlags: 0
