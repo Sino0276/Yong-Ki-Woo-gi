@@ -37,14 +37,6 @@ public class UserManager
         if (PlayerPrefs.HasKey("DragonData")) JsonUtility.FromJsonOverwrite(PlayerPrefs.GetString("DragonData"), Dragon);
         if (PlayerPrefs.HasKey("ConsumableData")) JsonUtility.FromJsonOverwrite(PlayerPrefs.GetString("ConsumableData"), Consumable);
         if (PlayerPrefs.HasKey("CurrentDragonId")) CurrentDragonId = PlayerPrefs.GetInt("CurrentDragonId");
-
-        Debug.Log(PlayerPrefs.GetString("Currency"));
-        Debug.Log(PlayerPrefs.GetString("StatLevel"));
-        Debug.Log(PlayerPrefs.GetString("CurrentStat"));
-        Debug.Log(PlayerPrefs.GetString("StageData"));
-        Debug.Log(PlayerPrefs.GetString("DragonData"));
-        Debug.Log(PlayerPrefs.GetString("ConsumableData"));
-        Debug.Log(PlayerPrefs.GetInt("CurrentDragonId"));
     }
 
     public void Reset()
@@ -67,14 +59,6 @@ public class UserManager
         PlayerPrefs.SetString("DragonData", JsonUtility.ToJson(Dragon));
         PlayerPrefs.SetString("ConsumableData", JsonUtility.ToJson(Consumable));
         PlayerPrefs.SetInt("CurrentDragonId", CurrentDragonId);
-
-        Debug.Log(PlayerPrefs.GetString("Currency"));
-        Debug.Log(PlayerPrefs.GetString("StatLevel"));
-        Debug.Log(PlayerPrefs.GetString("CurrentStat"));
-        Debug.Log(PlayerPrefs.GetString("StageData"));
-        Debug.Log(PlayerPrefs.GetString("DragonData"));
-        Debug.Log(PlayerPrefs.GetString("ConsumableData"));
-        Debug.Log(PlayerPrefs.GetInt("CurrentDragonId"));
     }
 }
 
@@ -147,6 +131,8 @@ public class CurrentStat
     public void Init(UserManager userManager)
     {
         this.userManager = userManager;
+
+        CalculateStat();
 
         userManager.OnCurrentDragonIdChange += OnCurrentDragonIdChange;
 

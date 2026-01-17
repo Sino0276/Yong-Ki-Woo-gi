@@ -20,7 +20,7 @@ namespace Core
 
         public void Attack()
         {
-            float damage = Managers.Utility.damageCalculator.CalculateDamage(dragonController, out bool isCritical);
+            float damage = Managers.Utility.damageCalculator.CalculateDamage(out bool isCritical);
             Projectile projectile = Instantiate(GameManager.Instance.projectilePrefab, transform.position, Quaternion.identity);
             projectile.transform.localScale = isCritical ? new Vector3(1.5f, 1.5f, 1) : Vector3.one;
             List<Sprite> projectileSprites = Managers.Resource.LoadProjectileSprites(dragonController.DragonData.projectileSpritePath);

@@ -4,18 +4,15 @@ using UnityEngine;
 
 public class DamageCalculator
 {
-    public float CalculateDamage(DragonController dragonController, out bool isCritical)
+    public float CalculateDamage(out bool isCritical)
     {
-        int atkLevel = Managers.User.StatLevel.Atk.Value;
-        float damage = Managers.Data.LevelSO.AtkSO.AtkCurve.Evaluate(atkLevel) * dragonController.DragonStats.damageRate;
+        float damage = Managers.User.CurrentStat.Atk.Value;
 
-        int critRateLevel = Managers.User.StatLevel.CritRate.Value;
-        float critRate = Managers.Data.LevelSO.CritRateSO.CritRateCurve.Evaluate(critRateLevel) * dragonController.DragonStats.criticalRate;
+        float critRate = Managers.User.CurrentStat.CritRate.Value;
 
         if (critRate > Random.Range(0f, 100f))
         {
-            int critDmgLevel = Managers.User.StatLevel.CritDmg.Value;
-            float critDmg = Managers.Data.LevelSO.CritDmgSO.CritDmgCurve.Evaluate(critDmgLevel) + Random.Range(dragonController.DragonStats.minCriticalDamage, dragonController.DragonStats.maxCriticalDamage);
+            float critDmg = Managers.User.CurrentStat.CritDmg.Value;
             damage *= critDmg;
             isCritical = true;
         }
