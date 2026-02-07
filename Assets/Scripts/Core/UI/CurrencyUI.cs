@@ -14,6 +14,6 @@ public class CurrencyUI : MonoBehaviour
 
     private void OnCoinValueChange(int oldValue, int newValue)
     {
-        coinText.text = newValue.ToString();
+        coinText.text = newValue.ToString().ToKoreanUnitString();
     }
 }

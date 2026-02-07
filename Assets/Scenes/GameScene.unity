@@ -690,7 +690,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 62424974}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 754562452}
+        m_TargetAssemblyTypeName: UpgradePanelUI, Assembly-CSharp
+        m_MethodName: OnUpgradeButtonClick
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Atk
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &62424974
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -874,6 +886,7 @@ GameObject:
   - component: {fileID: 83605504}
   - component: {fileID: 83605506}
   - component: {fileID: 83605505}
+  - component: {fileID: 83605507}
   m_Layer: 5
   m_Name: CritDamage
   m_TagString: Untagged
@@ -942,6 +955,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 83605503}
   m_CullTransparentMesh: 1
+--- !u!114 &83605507
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 83605503}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6a4e050d91da1646b684e2d411c4d57, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  levelText: {fileID: 1960546592}
+  statText: {fileID: 934073479}
+  costText: {fileID: 172759952}
+  button: {fileID: 1333302239}
 --- !u!1 &110140113
 GameObject:
   m_ObjectHideFlags: 0
@@ -2384,6 +2413,7 @@ GameObject:
   - component: {fileID: 337134272}
   - component: {fileID: 337134274}
   - component: {fileID: 337134273}
+  - component: {fileID: 337134275}
   m_Layer: 5
   m_Name: AttackSpeed
   m_TagString: Untagged
@@ -2452,6 +2482,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 337134271}
   m_CullTransparentMesh: 1
+--- !u!114 &337134275
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 337134271}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6a4e050d91da1646b684e2d411c4d57, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  levelText: {fileID: 417855127}
+  statText: {fileID: 1901507087}
+  costText: {fileID: 880093443}
+  button: {fileID: 1103492552}
 --- !u!1 &349569706
 GameObject:
   m_ObjectHideFlags: 0
@@ -4270,6 +4316,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 754562451}
+  - component: {fileID: 754562452}
   m_Layer: 5
   m_Name: UpgradePanel
   m_TagString: Untagged
@@ -4299,6 +4346,24 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 1200, y: 300}
   m_Pivot: {x: 0.5, y: 0}
+--- !u!114 &754562452
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 754562450}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: def366eaf51931744aeaa4473d59c40c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  atkUpgradeUI: {fileID: 1437753417}
+  atkSpeedUpgradeUI: {fileID: 337134275}
+  critRateUpgradeUI: {fileID: 1026329580}
+  critDmgUpgradeUI: {fileID: 83605507}
+  feverUpgradeUI: {fileID: 1973144940}
+  feverTimeUpgradeUI: {fileID: 1156778330}
 --- !u!1 &768663145
 GameObject:
   m_ObjectHideFlags: 0
@@ -6222,6 +6287,7 @@ GameObject:
   - component: {fileID: 1026329577}
   - component: {fileID: 1026329579}
   - component: {fileID: 1026329578}
+  - component: {fileID: 1026329580}
   m_Layer: 5
   m_Name: CritRate
   m_TagString: Untagged
@@ -6290,6 +6356,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1026329576}
   m_CullTransparentMesh: 1
+--- !u!114 &1026329580
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1026329576}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6a4e050d91da1646b684e2d411c4d57, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  levelText: {fileID: 217654251}
+  statText: {fileID: 440030795}
+  costText: {fileID: 843149952}
+  button: {fileID: 2102588017}
 --- !u!1 &1033399636
 GameObject:
   m_ObjectHideFlags: 0
@@ -7070,6 +7152,7 @@ GameObject:
   - component: {fileID: 1156778327}
   - component: {fileID: 1156778329}
   - component: {fileID: 1156778328}
+  - component: {fileID: 1156778330}
   m_Layer: 5
   m_Name: FeverTime
   m_TagString: Untagged
@@ -7138,6 +7221,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1156778326}
   m_CullTransparentMesh: 1
+--- !u!114 &1156778330
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1156778326}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6a4e050d91da1646b684e2d411c4d57, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  levelText: {fileID: 1829629608}
+  statText: {fileID: 986530050}
+  costText: {fileID: 1836037883}
+  button: {fileID: 768663147}
 --- !u!1 &1163351346
 GameObject:
   m_ObjectHideFlags: 0
@@ -8487,6 +8586,7 @@ GameObject:
   - component: {fileID: 1437753414}
   - component: {fileID: 1437753416}
   - component: {fileID: 1437753415}
+  - component: {fileID: 1437753417}
   m_Layer: 5
   m_Name: Attack
   m_TagString: Untagged
@@ -8555,6 +8655,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1437753413}
   m_CullTransparentMesh: 1
+--- !u!114 &1437753417
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1437753413}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6a4e050d91da1646b684e2d411c4d57, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  levelText: {fileID: 79834945}
+  statText: {fileID: 1081392074}
+  costText: {fileID: 1736485621}
+  button: {fileID: 62424973}
 --- !u!1 &1439541814
 GameObject:
   m_ObjectHideFlags: 0
@@ -12526,6 +12642,7 @@ GameObject:
   - component: {fileID: 1973144937}
   - component: {fileID: 1973144939}
   - component: {fileID: 1973144938}
+  - component: {fileID: 1973144940}
   m_Layer: 5
   m_Name: Fever
   m_TagString: Untagged
@@ -12594,6 +12711,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1973144936}
   m_CullTransparentMesh: 1
+--- !u!114 &1973144940
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1973144936}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6a4e050d91da1646b684e2d411c4d57, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  levelText: {fileID: 17275731}
+  statText: {fileID: 948277112}
+  costText: {fileID: 989806163}
+  button: {fileID: 1445194136}
 --- !u!1 &1994182903
 GameObject:
   m_ObjectHideFlags: 0

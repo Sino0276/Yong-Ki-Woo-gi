@@ -35,7 +35,7 @@ public class Managers : Singleton<Managers>
         Init();
     }
 
-    private void Init()
+    public void Init()
     {
         dataManager.Init();
         soundManager.Init();

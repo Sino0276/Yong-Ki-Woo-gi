@@ -1,0 +1,97 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &5765106708238863620
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7216135210638490896}
+  - component: {fileID: 1667558876024160443}
+  m_Layer: 0
+  m_Name: Managers
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7216135210638490896
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5765106708238863620}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1667558876024160443
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5765106708238863620}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e7114fadbba6bc146b67b9ead96da592, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isDontDestroyOnLoad: 1
+  dataManager:
+    <LevelSO>k__BackingField: {fileID: 11400000, guid: b1d3da5b40acc5d41a49c4db72b4bb92, type: 2}
+  userManager:
+    <Currency>k__BackingField:
+      <Coin>k__BackingField:
+        value: 389
+      <Ruby>k__BackingField:
+        value: 0
+    <StatLevel>k__BackingField:
+      <Atk>k__BackingField:
+        value: 0
+      <AtkSpeed>k__BackingField:
+        value: 0
+      <CritRate>k__BackingField:
+        value: 0
+      <CritDmg>k__BackingField:
+        value: 0
+      <Fever>k__BackingField:
+        value: 0
+      <FeverTime>k__BackingField:
+        value: 0
+    <CurrentStat>k__BackingField:
+      <Atk>k__BackingField:
+        value: 1
+      <AtkSpeed>k__BackingField:
+        value: 0
+      <CritRate>k__BackingField:
+        value: 1
+      <CritDmg>k__BackingField:
+        value: 1
+      <Fever>k__BackingField:
+        value: 0
+      <FeverTime>k__BackingField:
+        value: 0
+    <Stage>k__BackingField:
+      <CurrentStage>k__BackingField:
+        value: 1
+      <CurrentCount>k__BackingField:
+        value: 10
+    <Dragon>k__BackingField:
+      dragonList: 01000000
+    <Consumable>k__BackingField:
+      <BluePotion>k__BackingField:
+        value: 0
+      <YellowPotion>k__BackingField:
+        value: 0
+      <RedPotion>k__BackingField:
+        value: 0
+    <CurrentDragonId>k__BackingField: 1
+  isInitialized: 1
