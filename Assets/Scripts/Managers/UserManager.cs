@@ -125,6 +125,12 @@ public class CurrentStat
     [field: SerializeField] public StatValue<float> CritDmg { get; private set; } = new StatValue<float>();
     [field: SerializeField] public StatValue<float> Fever { get; private set; } = new StatValue<float>();
     [field: SerializeField] public StatValue<float> FeverTime { get; private set; } = new StatValue<float>();
+    public event Action<float, float> OnAtkChange;
+    public event Action<float, float> OnAtkSpeedChange;
+    public event Action<float, float> OnCritRateChange;
+    public event Action<float, float> OnCritDmgChange;
+    public event Action<float, float> OnFeverChange;
+    public event Action<float, float> OnFeverTimeChange;
 
     private UserManager userManager;
 
@@ -151,32 +157,50 @@ public class CurrentStat
 
     public void OnStatLevelAtkChange(int oldValue, int newValue)
     {
-        Atk.Value = Managers.Data.LevelSO.AtkSO.AtkCurve.Evaluate(newValue) * Managers.Data.DragonData.GetByKey(userManager.CurrentDragonId).damage;
+        float atk = Managers.Data.LevelSO.AtkSO.AtkCurve.Evaluate(newValue);
+        float DragonAtk = atk * (Managers.Data.DragonData.GetByKey(userManager.CurrentDragonId).damage - 1);
+        Atk.Value = atk + DragonAtk;
+        OnAtkChange?.Invoke(atk, DragonAtk);
     }
 
     public void OnStatLevelAtkSpeedChange(int oldValue, int newValue)
     {
-        AtkSpeed.Value = Managers.Data.LevelSO.AtkSpeedSO.AtkSpeedCurve.Evaluate(newValue) * Managers.Data.DragonData.GetByKey(userManager.CurrentDragonId).atkSpeed;
+        float atkSpeed = Managers.Data.LevelSO.AtkSpeedSO.AtkSpeedCurve.Evaluate(newValue);
+        float dragonAtkSpeed = Managers.Data.DragonData.GetByKey(userManager.CurrentDragonId).atkSpeed;
+        AtkSpeed.Value = atkSpeed + dragonAtkSpeed;
+        OnAtkSpeedChange?.Invoke(atkSpeed, dragonAtkSpeed);
     }
 
     public void OnStatLevelCritRateChange(int oldValue, int newValue)
     {
-        CritRate.Value = Managers.Data.LevelSO.CritRateSO.CritRateCurve.Evaluate(newValue) * Managers.Data.DragonData.GetByKey(userManager.CurrentDragonId).critRate;
+        float critRate = Managers.Data.LevelSO.CritRateSO.CritRateCurve.Evaluate(newValue);
+        float dragonCritRate = critRate * (Managers.Data.DragonData.GetByKey(userManager.CurrentDragonId).critRate - 1);
+        CritRate.Value = critRate + dragonCritRate;
+        OnCritRateChange?.Invoke(critRate, dragonCritRate);
     }
     
     public void OnStatLevelCritDmgChange(int oldValue, int newValue)
     {
-        CritDmg.Value = Managers.Data.LevelSO.CritDmgSO.CritDmgCurve.Evaluate(newValue) * Managers.Data.DragonData.GetByKey(userManager.CurrentDragonId).minCritDmg;
+        float critDmg = Managers.Data.LevelSO.CritDmgSO.CritDmgCurve.Evaluate(newValue);
+        float dragonCritDmg = critDmg * (Managers.Data.DragonData.GetByKey(userManager.CurrentDragonId).minCritDmg - 1);
+        CritDmg.Value = critDmg + dragonCritDmg;
+        OnCritDmgChange?.Invoke(critDmg, dragonCritDmg);
     }
 
     public void OnStatLevelFeverChange(int oldValue, int newValue)
     {
-        Fever.Value = Managers.Data.LevelSO.FeverSO.FeverCurve.Evaluate(newValue) * Managers.Data.DragonData.GetByKey(userManager.CurrentDragonId).fever;
+        float fever = Managers.Data.LevelSO.FeverSO.FeverCurve.Evaluate(newValue);
+        float dragonFever = Managers.Data.DragonData.GetByKey(userManager.CurrentDragonId).fever;
+        Fever.Value = fever + dragonFever;
+        OnFeverChange?.Invoke(fever, dragonFever);
     }
     
     public void OnStatLevelFeverTimeChange(int oldValue, int newValue)
     {
-        FeverTime.Value = Managers.Data.LevelSO.FeverTimeSO.FeverTimeCurve.Evaluate(newValue) * Managers.Data.DragonData.GetByKey(userManager.CurrentDragonId).feverTime;
+        float feverTime = Managers.Data.LevelSO.FeverTimeSO.FeverTimeCurve.Evaluate(newValue);
+        float dragonFeverTime = Managers.Data.DragonData.GetByKey(userManager.CurrentDragonId).feverTime;
+        FeverTime.Value = feverTime + dragonFeverTime;
+        OnFeverTimeChange?.Invoke(feverTime, dragonFeverTime);
     }
 
     public void CalculateStat()
