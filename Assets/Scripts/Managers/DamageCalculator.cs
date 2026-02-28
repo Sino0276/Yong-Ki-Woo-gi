@@ -10,7 +10,7 @@ public class DamageCalculator
 
         float critRate = Managers.User.CurrentStat.CritRate.Value;
 
-        if (critRate > Random.Range(0f, 100f))
+        if (GameManager.Instance.Dragon.IsFevering || critRate > Random.Range(0f, 100f))
         {
             float critDmg = Managers.User.CurrentStat.CritDmg.Value;
             damage *= critDmg;

@@ -48,6 +48,8 @@ public class UserManager
         Dragon = new Dragon();
         Consumable = new Consumable();
         CurrentDragonId = 1;
+
+        CurrentStat.Init(this);
     }
 
     public void Save()
@@ -108,12 +110,12 @@ public class Currency
 [System.Serializable]
 public class StatLevel
 {
-    [field: SerializeField] public StatValue<int> Atk { get; private set; } = new StatValue<int>();
-    [field: SerializeField] public StatValue<int> AtkSpeed { get; private set; } = new StatValue<int>();
-    [field: SerializeField] public StatValue<int> CritRate { get; private set; } = new StatValue<int>();
-    [field: SerializeField] public StatValue<int> CritDmg { get; private set; } = new StatValue<int>();
-    [field: SerializeField] public StatValue<int> Fever { get; private set; } = new StatValue<int>();
-    [field: SerializeField] public StatValue<int> FeverTime { get; private set; } = new StatValue<int>();
+    [field: SerializeField] public StatValue<int> Atk { get; private set; } = new StatValue<int>(1);
+    [field: SerializeField] public StatValue<int> AtkSpeed { get; private set; } = new StatValue<int>(1);
+    [field: SerializeField] public StatValue<int> CritRate { get; private set; } = new StatValue<int>(1);
+    [field: SerializeField] public StatValue<int> CritDmg { get; private set; } = new StatValue<int>(1);
+    [field: SerializeField] public StatValue<int> Fever { get; private set; } = new StatValue<int>(1);
+    [field: SerializeField] public StatValue<int> FeverTime { get; private set; } = new StatValue<int>(1);
 }
 
 [System.Serializable]
@@ -123,7 +125,8 @@ public class CurrentStat
     [field: SerializeField] public StatValue<float> AtkSpeed { get; private set; } = new StatValue<float>();
     [field: SerializeField] public StatValue<float> CritRate { get; private set; } = new StatValue<float>();
     [field: SerializeField] public StatValue<float> CritDmg { get; private set; } = new StatValue<float>();
-    [field: SerializeField] public StatValue<float> Fever { get; private set; } = new StatValue<float>();
+    [field: SerializeField] public StatValue<float> MaxFever { get; private set; } = new StatValue<float>();
+    [field: SerializeField] public StatValue<float> CurrentFever { get; private set; } = new StatValue<float>();
     [field: SerializeField] public StatValue<float> FeverTime { get; private set; } = new StatValue<float>();
     public event Action<float, float> OnAtkChange;
     public event Action<float, float> OnAtkSpeedChange;
@@ -191,7 +194,8 @@ public class CurrentStat
     {
         float fever = Managers.Data.LevelSO.FeverSO.FeverCurve.Evaluate(newValue);
         float dragonFever = Managers.Data.DragonData.GetByKey(userManager.CurrentDragonId).fever;
-        Fever.Value = fever + dragonFever;
+        CurrentFever.Value = 0;
+        MaxFever.Value = fever + dragonFever;
         OnFeverChange?.Invoke(fever, dragonFever);
     }
     

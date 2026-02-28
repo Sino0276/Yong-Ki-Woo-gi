@@ -11,6 +11,10 @@ public class DragonController : MonoBehaviour
     [field: SerializeField] public DragonStats DragonStats { get; private set; }
     [field: SerializeField] public GameInfo_DragonsData DragonData { get; private set;}
 
+    public bool IsFevering { get; private set; } = false;
+
+    private float autoAttackTimer = 0;
+
     public void Start()
     {
         Init(1);
@@ -29,16 +33,53 @@ public class DragonController : MonoBehaviour
         {
             Attack();
         }
+
+        autoAttackTimer += Time.deltaTime;
+
+        if(autoAttackTimer >= 100 / Managers.User.CurrentStat.AtkSpeed.Value)
+        {
+            Attack();
+            autoAttackTimer = 0;
+        }
     }
 
     public void Attack()
     {
         attackHandlers[currentAttackHandlerIndex].Attack();
         currentAttackHandlerIndex++;
+        AddFever();
         if (currentAttackHandlerIndex >= attackHandlers.Length)
         {
             currentAttackHandlerIndex = 0;
         }
+    }
+
+    public void AddFever()
+    {
+        if(Managers.User.CurrentStat.CurrentFever.Value < Managers.User.CurrentStat.MaxFever.Value)
+        {
+            Managers.User.CurrentStat.CurrentFever.Value++;
+            if(!IsFevering && Managers.User.CurrentStat.CurrentFever.Value >= Managers.User.CurrentStat.MaxFever.Value)
+            {
+                StartCoroutine(StartFever());
+            }
+        }
+    }
+
+    private IEnumerator StartFever()
+    {
+        IsFevering = true;
+        float feverTime = Managers.User.CurrentStat.FeverTime.Value;
+        float feverTimeMax = Managers.User.CurrentStat.FeverTime.Value;
+        
+        while(feverTime > 0)
+        {
+            feverTime -= Time.deltaTime;
+            Managers.User.CurrentStat.CurrentFever.Value = (int)(Managers.User.CurrentStat.MaxFever.Value * (feverTime / feverTimeMax));
+            yield return null;
+        }
+        IsFevering = false;
+        Managers.User.CurrentStat.CurrentFever.Value = 0;
     }
 }
 

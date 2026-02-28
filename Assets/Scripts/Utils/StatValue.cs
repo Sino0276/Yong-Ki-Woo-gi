@@ -4,6 +4,7 @@ using UnityEngine;
 [System.Serializable]
 public class StatValue<T>
 {
+    private T maxValue;
     [SerializeField] private T value;
     public T Value { get => value; set => SetValue(value); }
     public event Action<T, T> OnValueChange;
