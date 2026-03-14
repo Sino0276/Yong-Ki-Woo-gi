@@ -379,7 +379,7 @@
       "key": 16,
       "name": "노란용",
       "description": "빨간용의 사촌 동생이다. 온 몸에서 정전기가 나오는 특이체질을 가지고 태어났다고 한다.",
-      "iconPath": "",
+      "iconPath": "Icon/Icon_Dragon_15",
       "prefabPath": "",
       "projectileSpritePath": [
         "Br_baby_00",

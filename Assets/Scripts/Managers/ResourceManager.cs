@@ -21,7 +21,7 @@ public class ResourceManager
         resource = Resources.Load<T>(path);
         if (resource == null)
         {
-            Debug.Log($"Failed to load prefab at path: {path}");
+            Debug.LogWarning($"Failed to load prefab at path: {path}");
             return null;
         }
 
@@ -38,7 +38,7 @@ public class ResourceManager
             Sprite sprite = Load<Sprite>("Projectiles/" + paths[i]);
             if (sprite == null)
             {
-                Debug.Log($"Failed to load prefab at path: {paths[i]}");
+                Debug.LogWarning($"Failed to load prefab at path: {paths[i]}");
                 return null;
             }
 
