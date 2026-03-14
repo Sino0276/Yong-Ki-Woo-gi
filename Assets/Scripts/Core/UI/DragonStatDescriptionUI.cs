@@ -21,9 +21,9 @@ public class DragonStatDescriptionUI : MonoBehaviour
 
     private void ResetDescription()
     {
-        while(content.childCount != 0) 
+        for(int i = content.childCount; i > 0; i--)
         {
-            Destroy(content.GetChild(0));
+            Destroy(content.GetChild(i - 1).gameObject);
         }
     }
 

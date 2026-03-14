@@ -6034,6 +6034,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   content: {fileID: 36264317}
+  dragonDescriptionUI: {fileID: 1039832013}
+  dragonStatDescriptionUI: {fileID: 130411435}
 --- !u!1 &843149950
 GameObject:
   m_ObjectHideFlags: 0
