@@ -76,20 +76,20 @@ public class Consumable
 public class Dragon
 {
     [SerializeField] private List<int> dragonList = new List<int>() { 1 };
-    public event Action<List<int>, List<int>> OnDragonListChange;
+    public event Action<List<int>> OnDragonListChange;
 
     public IReadOnlyList<int> DragonList => dragonList;
 
     public void AddDragon(int dragonId)
     {
         dragonList.Add(dragonId);
-        OnDragonListChange?.Invoke(dragonList, dragonList);
+        OnDragonListChange?.Invoke(dragonList);
     }
 
     public void RemoveDragon(int dragonId)
     {
         dragonList.Remove(dragonId);
-        OnDragonListChange?.Invoke(dragonList, dragonList);
+        OnDragonListChange?.Invoke(dragonList);
     }
 }
 

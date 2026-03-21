@@ -1,6 +1,8 @@
+using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
-public class DragonLibraryUI : MonoBehaviour
+public class DragonLibraryUI : BaseUI
 {
     private DragonIconUI dragonIconPrefab;
     [SerializeField] private Transform content;
@@ -18,8 +20,9 @@ public class DragonLibraryUI : MonoBehaviour
         foreach(var dragon in Managers.Data.DragonData.ItemsList)
         {
             DragonIconUI dragonIcon = Instantiate(dragonIconPrefab, content);
-            dragonIcon.SetUpIcon(Managers.Resource.Load<Sprite>(dragon.iconPath));
+            dragonIcon.SetUpIcon(dragon.key);
             dragonIcon.Button.onClick.AddListener(() => AddClickEvent(dragon.key));
+            Managers.User.Dragon.OnDragonListChange += (List<int> dragonList) => OnDragonListChange(dragonList, dragonIcon);
         }
     }
 
@@ -27,5 +30,10 @@ public class DragonLibraryUI : MonoBehaviour
     {
         dragonDescriptionUI.SetUpDescription(id);
         dragonStatDescriptionUI.SetUpStatDescription(id);
+    }
+
+    private void OnDragonListChange(List<int> dragonList, DragonIconUI ui)
+    {
+        ui.SetIconShadow(dragonList.Contains(ui.ID));
     }
 }

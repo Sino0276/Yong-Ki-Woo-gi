@@ -653,7 +653,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 30}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &36264318
 MonoBehaviour:
@@ -4159,7 +4159,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 488981842}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1039832013}
+        m_TargetAssemblyTypeName: DragonDescriptionUI, Assembly-CSharp
+        m_MethodName: UseDragon
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &488981842
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4770,7 +4782,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: -180}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &526821313
 MonoBehaviour:
@@ -5025,7 +5037,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 558431872}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 813991039}
+        m_TargetAssemblyTypeName: BaseUI, Assembly-CSharp
+        m_MethodName: ToggleUI
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &558431872
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5166,17 +5190,6 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 2229081688452370084, guid: 6e41ad82ff5504445bbd5203a4105022, type: 3}
   m_PrefabInstance: {fileID: 579250079}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &579250081 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 4757533075265902897, guid: 6e41ad82ff5504445bbd5203a4105022, type: 3}
-  m_PrefabInstance: {fileID: 579250079}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &586027506
 GameObject:
   m_ObjectHideFlags: 0
@@ -5996,7 +6009,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &813991038
 RectTransform:
   m_ObjectHideFlags: 0
@@ -7065,7 +7078,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 946338030}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 813991039}
+        m_TargetAssemblyTypeName: BaseUI, Assembly-CSharp
+        m_MethodName: ToggleUI
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &946338030
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8506,7 +8531,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 152c714a9b5520a4ba7fdab59b759144, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  iconImage: {fileID: 579250081}
+  dragonIconUI: {fileID: 1817381106}
   nameText: {fileID: 1425055160}
   descriptionText: {fileID: 958293661}
   dropRateText: {fileID: 1171134538}
@@ -14020,6 +14045,17 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1755064103}
   m_CullTransparentMesh: 1
+--- !u!114 &1817381106 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: -7595262129569416085, guid: 6e41ad82ff5504445bbd5203a4105022, type: 3}
+  m_PrefabInstance: {fileID: 579250079}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b949da2ba55386b4399bfcd38d6c8b3a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1821743828
 GameObject:
   m_ObjectHideFlags: 0

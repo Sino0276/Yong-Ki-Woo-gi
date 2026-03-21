@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 [System.Serializable]
@@ -31,9 +32,11 @@ public class GameManager : Singleton<GameManager>
 
     public void SpawnDragon(int id)
     {
+        if (!Dragon.IsUnityNull()) Destroy(Dragon.gameObject);
         GameInfo_DragonsData dragonData = Managers.Data.DragonData.GetByKey(id);
         DragonController dragon = Managers.Resource.Load<DragonController>(dragonData.prefabPath);
         Dragon = Object.Instantiate(dragon, dragonSpawnPoint.transform.position, Quaternion.identity);
         Dragon.Init(id);
+        Managers.User.ChangeDragon(id);
     }
 }
